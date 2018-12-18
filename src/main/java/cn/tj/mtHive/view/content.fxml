@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.ContentController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ListView prefHeight="200.0" prefWidth="175.0" />
+            <Label fx:id="infoLabel" layoutX="35.0" layoutY="244.0" text="Statistic Result">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label layoutX="73.0" layoutY="14.0" text="店名">
+               <font>
+                  <Font name="Microsoft YaHei Bold" size="15.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="13.0" layoutY="59.0" prefHeight="121.0" prefWidth="150.0" spacing="8.0">
+               <children>
+                  <Button fx:id="monthTotalMoneyButton" mnemonicParsing="false" text="当月销售额统计" />
+                  <Button fx:id="supplierSaleButton" mnemonicParsing="false" prefHeight="23.0" prefWidth="126.0" text="供应商产品销售额" />
+                  <Button fx:id="goodsSaleButton" mnemonicParsing="false" text="商品销售额占比" />
+               </children>
+            </VBox>
+            <ToolBar layoutY="308.0" prefHeight="41.0" prefWidth="175.0">
+              <items>
+                <Button fx:id="connTestButton" mnemonicParsing="false" text="连接测试" />
+                  <Label fx:id="connTestLabel" text="Label">
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                  </Label>
+              </items>
+            </ToolBar>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <PieChart layoutY="-26.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0" />
+            <PieChart fx:id="pieChart" layoutX="-7.0" layoutY="-26.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
